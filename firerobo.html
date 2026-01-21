@@ -1,0 +1,152 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Firefighting UGV Rover - Aruna Yelyubay</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+    body { background-color: #f0f2f5; }
+    .project-container { 
+        max-width: 900px; 
+        margin: 40px auto; 
+        padding: 40px; 
+        background: #ffffff; 
+        box-shadow: 0px 10px 30px rgba(0,0,0,0.1); 
+        border-radius: 12px;
+    }
+    
+    /* Ссылка назад */
+    .back-link { text-decoration: none; font-weight: 700; color: #007bff; display: block; margin-bottom: 20px; }
+    
+    /* Фикс для заголовков: теперь они ВСЕГДА черные */
+    h1, h2, h3, h4 { 
+        color: #000000 !important; 
+        font-weight: 800 !important; 
+        text-transform: none !important; /* Убирает капс, если он есть */
+        letter-spacing: normal !important;
+    }
+
+    h1 { font-size: 2.5em; margin-bottom: 20px; }
+    h2 { border-bottom: 3px solid #007bff; padding-bottom: 10px; margin-top: 40px; }
+    h3 { font-size: 1.5em; margin-top: 20px; }
+
+    .intro-text { font-size: 1.15em; line-height: 1.7; color: #000000; margin-bottom: 30px; }
+    
+    ul li { margin-bottom: 15px; padding-left: 25px; position: relative; line-height: 1.6; color: #000000; }
+    ul li::before { content: "•"; color: #007bff; font-weight: bold; position: absolute; left: 0; font-size: 1.2em; }
+
+    /* Компактный блок инструментов */
+    /* Компактный блок инструментов по высоте */
+    /* Полноценный по ширине, но аккуратный по высоте блок */
+    .tech-section { 
+        background: #f8f9fa; 
+        padding: 15px 30px; /* Компактные отступы сверху/снизу, нормальные по бокам */
+        border-left: 6px solid #007bff; 
+        margin: 30px 0;    /* Отступ от других блоков */
+        width: 100%;       /* Растягивается на всю доступную ширину контейнера */
+        box-sizing: border-box;
+        color: #000000; 
+    }
+
+    .tech-section h3 {
+        margin: 0 0 10px 0 !important; /* Убираем лишний отступ сверху */
+        font-size: 1.4em !important;
+        color: #000000 !important;
+    }
+
+    .tech-section p { 
+        margin-bottom: 8px; /* Небольшой отступ между строками */
+        font-size: 1em; 
+        line-height: 1.5; 
+        color: #000000; 
+    }
+    
+    /* Последний абзац без отступа снизу */
+    .tech-section p:last-child {
+        margin-bottom: 0;
+    }
+/* Стили для встраивания видео */
+    .video-container {
+        text-align: center;
+        margin: 40px auto;
+        max-width: 400px; /* Так как это Shorts, делаем контейнер узким */
+    }
+
+    .video-wrapper {
+        position: relative;
+        padding-bottom: 177.77%; /* Соотношение сторон 9:16 для вертикального видео */
+        height: 0;
+        overflow: hidden;
+        border-radius: 12px;
+        border: 2px solid #007bff;
+        box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .video-wrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .video-box { 
+        text-align: center; 
+        margin: 40px auto; 
+        padding: 30px; 
+        border: 2px solid #007bff; 
+        border-radius: 8px; 
+        max-width: 400px; /* Видео-бокс тоже сделаем компактнее */
+    }
+    .video-box a { color: #007bff; font-weight: 800; text-decoration: underline; }
+</style>
+	</head>
+	<body>
+
+		<div class="project-container">
+			<a href="index.html#projects" class="back-link">← Back to Portfolio</a>
+
+			<h3>AI-powered Firefighting UGV Rover</h3>
+
+			<p class="intro-text">
+				This project presents the development of a fire-fighting robot that integrates fire detection and suppression mechanisms. Built on the <strong>UGV Rover platform</strong>, the system is designed to operate without human intervention in hazardous environments like industrial zones and disaster recovery operations.
+			</p>
+
+			<h3>Highlights</h3>
+			<ul>
+				<li><strong>AI Vision System:</strong> Developed a real-time fire detection module using the <strong>YOLOv8</strong> deep learning model integrated with OpenCV, processing live video feeds with high accuracy.</li>
+				<li><strong>Detection & Actuation:</strong> Once fire is identified, the system automatically triggers a <strong>shooting mechanism</strong> via WebSocket communication for fast, asynchronous response.</li>
+				<li><strong>Hardware Integration:</strong> Utilizes a <strong>Raspberry Pi 5</strong> for high-level vision processing and task execution, while an <strong>ESP32 microcontroller</strong> handles motor control and wireless communication.</li>
+				<li><strong>Suppression Mechanism:</strong> Equipped with a 3D-modeled Orbeez gun repurposed for fire suppression, controlled through a relay-based actuation system.</li>
+				<li><strong>Custom Engineering:</strong> Designed and 3D-printed a detachable mounting system and specialized tubes to ensure stable component integration and reliable operation during motion.</li>
+			</ul>
+            <h3>System Architecture</h3>
+            <div style="text-align: center; margin: 30px 0;">
+            <img src="images/diagram.png" alt="Firefighting Robot System Architecture" style="width:100%; max-width:800px; border-radius: 8px; border: 1px solid #ddd;">
+            <p style="font-style: italic; color: #555; margin-top: 10px;">Diagram: Interaction between Raspberry Pi 5, ESP32, and YOLOv8 Vision Model.</p>
+            </div>
+			<div class="tech-section">
+				<h3>Tools & Technologies</h3>
+				<p><strong>Hardware:</strong> Raspberry Pi 5, ESP32, UGV Rover Platform, Camera Module, Relay, Orbeez Gun.</p>
+				<p><strong>Software:</strong> Python, YOLOv8, OpenCV, Flask Framework, WebRTC.</p>
+				<p><strong>Protocols:</strong> WebSocket, UART (JSON-based messages), VNC Viewer.</p>
+				<p><strong>CAD:</strong> 3D Modeling on Fusion 360 and Printing for custom hardware integration.</p>
+			</div>
+
+			<div class="video-container">
+                <h3>Robot in Action</h3>
+                <div class="video-wrapper">
+                    <iframe 
+                        src="https://www.youtube.com/embed/POT5XzRh61E" 
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <p style="margin-top: 15px;">🎥 <a href="https://youtube.com/shorts/POT5XzRh61E" target="_blank" style="color: #007bff; font-weight: bold;">Open in YouTube</a></p>
+            </div>
+		</div>
+
+	</body>
+</html>
